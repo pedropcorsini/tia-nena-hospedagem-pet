@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, MessageCircle, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
+import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
 import { links, navItems } from "@/data/landing";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -40,7 +41,7 @@ export function Header() {
           <Link
             href="#inicio"
             className="flex items-center gap-3 rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-honey"
-            aria-label="Tia Nena Hospedagem, ir para o inicio"
+            aria-label="Tia Nena Hospedagem, ir para o início"
             onClick={() => setOpen(false)}
           >
             <Image
@@ -68,7 +69,7 @@ export function Header() {
           <div className="hidden items-center gap-3 lg:flex">
             <Button asChild variant="accent" size="md">
               <a href={links.scheduleVisit} target="_blank" rel="noreferrer">
-                <MessageCircle className="h-4 w-4" aria-hidden />
+                <WhatsappIcon className="h-4 w-4" />
                 Agendar visita
               </a>
             </Button>
@@ -109,7 +110,7 @@ export function Header() {
               ))}
               <Button asChild variant="accent" size="lg" className="mt-2 w-full">
                 <a href={links.scheduleVisit} target="_blank" rel="noreferrer">
-                  <MessageCircle className="h-5 w-5" aria-hidden />
+                  <WhatsappIcon className="h-5 w-5" />
                   Agendar visita
                 </a>
               </Button>

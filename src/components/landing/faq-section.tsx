@@ -1,8 +1,5 @@
-import { MessageCircle } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { faqs, links } from "@/data/landing";
+import { faqs } from "@/data/landing";
 import { SectionHeading } from "@/components/landing/section-heading";
 
 export function FaqSection() {
@@ -14,15 +11,9 @@ export function FaqSection() {
             <SectionHeading
               align="left"
               eyebrow="FAQ"
-              title="Duvidas comuns antes de deixar seu pet."
-              description="Se algo importante nao estiver aqui, o melhor caminho e conversar pelo WhatsApp e contar a rotina do seu cao."
+              title="Dúvidas comuns antes de deixar seu pet."
+              description="Se algo importante não estiver aqui, o melhor caminho é conversar pelo WhatsApp e contar a rotina do seu cão."
             />
-            <Button asChild variant="outline" size="lg" className="mt-8 bg-white">
-              <a href={links.askQuestions} target="_blank" rel="noreferrer">
-                <MessageCircle className="h-5 w-5" aria-hidden />
-                Falar com a Tia Nena
-              </a>
-            </Button>
           </div>
 
           <div className="space-y-4">

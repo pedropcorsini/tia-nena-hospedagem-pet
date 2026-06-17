@@ -22,13 +22,13 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tia-nena-hospedagem
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Tia Nena Hospedagem Pet | Hospedagem familiar para caes",
+    default: "Tia Nena Hospedagem Pet | Hospedagem familiar para cães",
     template: "%s | Tia Nena Hospedagem Pet",
   },
   description:
-    "Hospedagem familiar para caes em Sao Paulo, sem gaiolas, com rotina individual, atualizacoes diarias e cuidado especial para idosos.",
+    "Hospedagem familiar para cães em São Paulo, sem gaiolas, com rotina individual, atualizações diárias e cuidado especial para idosos.",
   keywords: [
-    "hospedagem para caes",
+    "hospedagem para cães",
     "hotel para cachorro",
     "creche para cachorro",
     "hospedagem familiar pet",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tia Nena Hospedagem Pet",
     description:
-      "Seu pet cuidado como parte da casa: hospedagem familiar, sem gaiolas e com acompanhamento diario.",
+      "Seu pet cuidado como parte da casa: hospedagem familiar, sem gaiolas e com acompanhamento diário.",
     url: siteUrl,
     siteName: "Tia Nena Hospedagem Pet",
     locale: "pt_BR",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Tia Nena Hospedagem Pet",
-    description: "Hospedagem familiar para caes com cuidado atento e rotina individual.",
+    description: "Hospedagem familiar para cães com cuidado atento e rotina individual.",
   },
   alternates: {
     canonical: siteUrl,

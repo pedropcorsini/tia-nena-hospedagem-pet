@@ -1,7 +1,6 @@
-import { ArrowRight } from "lucide-react";
-
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
+import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
 import { links, processSteps } from "@/data/landing";
 import { SectionHeading } from "@/components/landing/section-heading";
 
@@ -13,14 +12,15 @@ export function ProcessSection() {
           <div>
             <SectionHeading
               align="left"
+              tone="light"
               eyebrow="Como funciona"
-              title="A decisao acontece antes da reserva, nao depois."
-              description="A avaliacao evita experiencias ruins. Se a rotina do pet combinar com a hospedagem familiar, a estadia segue com previsibilidade para o tutor e conforto para o cao."
+              title="A decisão acontece antes da reserva, não depois."
+              description="A avaliação evita experiências ruins. Se a rotina do pet combinar com a hospedagem familiar, a estadia seguirá com previsibilidade para o tutor e conforto para o cão."
             />
             <Button asChild size="lg" variant="primary" className="mt-8">
               <a href={links.scheduleVisit} target="_blank" rel="noreferrer">
-                Comecar pelo WhatsApp
-                <ArrowRight className="h-5 w-5" aria-hidden />
+                <WhatsappIcon className="h-5 w-5" />
+                Começar pelo WhatsApp
               </a>
             </Button>
           </div>
