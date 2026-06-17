@@ -10,9 +10,9 @@ export function CareSection() {
           <div className="lg:sticky lg:top-28">
             <SectionHeading
               align="left"
-              eyebrow="Cuidado com criterio"
-              title="Nao e canil. E uma rotina de casa pensada para o seu cao."
-              description="A proposta e simples: menos improviso, mais observacao. Antes de confirmar a hospedagem, a Tia Nena entende comportamento, saude, rotina e necessidades especificas."
+              eyebrow="Cuidado com critério"
+              title="Não é canil. É uma rotina de casa pensada para o seu cão."
+              description="A proposta é simples: menos improviso e mais observação. Antes de confirmar a hospedagem, a Tia Nena entende comportamento, saúde, rotina e necessidades específicas."
             />
           </div>
 
@@ -26,7 +26,7 @@ export function CareSection() {
                   className="group rounded-[2rem] border border-ink/8 bg-white p-6 shadow-card transition-colors duration-200 hover:border-honey/45"
                 >
                   <div className="mb-8 flex items-center justify-between">
-                    <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-honey/16 text-tomato transition-colors duration-200 group-hover:bg-honey/25">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-honey text-ink transition-colors duration-200 group-hover:bg-[#d69800]">
                       <Icon className="h-6 w-6" aria-hidden />
                     </span>
                     <span className="font-heading text-sm font-black text-ink/25">

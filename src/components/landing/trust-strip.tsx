@@ -12,7 +12,7 @@ export function TrustStrip() {
             return (
               <article key={item.title} className="rounded-[1.5rem] bg-cream p-5">
                 <div className="flex items-start gap-4">
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-honey/18 text-tomato">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-honey text-ink">
                     <Icon className="h-6 w-6" aria-hidden />
                   </span>
                   <div>
