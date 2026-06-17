@@ -13,11 +13,11 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(180px,0.45fr)_minmax(260px,0.55fr)] lg:items-start">
           <div className="max-w-md">
             <Image
-              src="/images/logo-tia-nena.png"
+              src="/images/logo-tia-nena-transparente.png"
               alt="Tia Nena Hospedagem"
-              width={138}
-              height={64}
-              className="h-14 w-auto"
+              width={207}
+              height={96}
+              className="h-[5.25rem] w-auto"
             />
             <p className="mt-5 leading-7 text-ink/65">
               Hospedagem familiar para cães, com cuidado atento, rotina individual e comunicação próxima.
