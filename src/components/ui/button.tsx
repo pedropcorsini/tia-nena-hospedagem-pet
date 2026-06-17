@@ -12,9 +12,9 @@ const buttonVariants = cva(
         primary:
           "border-2 border-honey bg-honey text-ink shadow-[0_12px_26px_rgba(232,168,0,0.24)] hover:border-[#d69800] hover:bg-[#d69800]",
         accent:
-          "border-2 border-tomato bg-tomato text-white shadow-[0_12px_26px_rgba(200,52,42,0.22)] hover:border-[#a92c24] hover:bg-[#a92c24]",
+          "border-2 border-honey bg-honey text-ink shadow-[0_12px_26px_rgba(232,168,0,0.24)] hover:border-[#d69800] hover:bg-[#d69800]",
         outline:
-          "border-2 border-ink/15 bg-white text-ink hover:border-tomato/35 hover:bg-tomato/5",
+          "border-2 border-ink/15 bg-white text-ink hover:border-honey/70 hover:bg-honey/12",
         ghost: "border-2 border-transparent text-ink hover:bg-ink/5",
       },
       size: {

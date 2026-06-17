@@ -11,7 +11,7 @@ export function TestimonialsSection() {
         <SectionHeading
           eyebrow="Prova social"
           title="O tutor precisa confiar antes de viajar tranquilo."
-          description="A landing foi pensada para mostrar cuidado real: comunicacao, previsibilidade e acolhimento sem exageros comerciais."
+          description="Quem deixa seu pet aos cuidados de outra pessoa precisa sentir segurança. Por isso, a experiência de outros tutores ajuda a mostrar como o cuidado acontece na prática."
         />
 
         <div className="mt-12 grid gap-5 lg:grid-cols-3">
@@ -20,7 +20,7 @@ export function TestimonialsSection() {
               key={testimonial.author}
               className="rounded-[2rem] border border-ink/8 bg-white p-6 shadow-card"
             >
-              <div className="flex gap-1 text-honey" aria-label="Avaliacao 5 estrelas">
+              <div className="flex gap-1 text-honey" aria-label="Avaliação 5 estrelas">
                 {Array.from({ length: 5 }).map((_, index) => (
                   <Star key={index} className="h-5 w-5 fill-current" aria-hidden />
                 ))}
