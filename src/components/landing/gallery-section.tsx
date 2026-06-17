@@ -12,8 +12,8 @@ export function GallerySection() {
           <SectionHeading
             align="left"
             eyebrow="Bastidores"
-            title="Espaco preparado para receber fotos reais da rotina."
-            description="Enquanto as fotos definitivas nao entram, os placeholders mantem a composicao premium sem depender de imagens externas genericas."
+            title="Espaço preparado para receber fotos reais da rotina."
+            description="Enquanto as fotos definitivas não entram, os placeholders mantêm a composição premium sem depender de imagens externas genéricas."
           />
 
           <div className="grid grid-cols-2 gap-4">
@@ -22,8 +22,8 @@ export function GallerySection() {
                 key={label}
                 className="group min-h-48 overflow-hidden rounded-[2rem] border border-ink/8 bg-cream p-4 shadow-sm sm:min-h-64"
               >
-                <div className="flex h-full flex-col justify-between rounded-[1.4rem] bg-gradient-to-br from-honey/22 via-white to-tomato/10 p-5">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-tomato shadow-sm">
+                <div className="flex h-full flex-col justify-between rounded-[1.4rem] bg-gradient-to-br from-honey/24 via-white to-ink/5 p-5">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-honey text-ink shadow-sm">
                     {index % 2 === 0 ? (
                       <PawPrint className="h-6 w-6" aria-hidden />
                     ) : (

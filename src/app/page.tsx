@@ -17,15 +17,15 @@ export default function HomePage() {
     "@type": "LocalBusiness",
     name: brand.name,
     description:
-      "Hospedagem familiar para caes, sem gaiolas, com rotina individual e atualizacoes diarias.",
+      "Hospedagem familiar para cães, sem gaiolas, com rotina individual e atualizações diárias.",
     telephone: brand.phone,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Sao Paulo",
+      addressLocality: "São Paulo",
       addressRegion: "SP",
       addressCountry: "BR",
     },
-    areaServed: "Sao Paulo",
+    areaServed: "São Paulo",
     sameAs: [brand.instagram],
   };
 
