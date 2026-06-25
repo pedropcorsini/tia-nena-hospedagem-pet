@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | Tia Nena Hospedagem Pet",
   },
   description:
-    "Hospedagem familiar para cães em São Paulo, sem gaiolas, com rotina individual, atualizações diárias e cuidado especial para idosos.",
+    "Hospedagem familiar para cães em São Paulo, sem baias, com rotina individual, atualizações diárias e cuidado especial para idosos.",
   keywords: [
     "hospedagem para cães",
     "hotel para cachorro",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tia Nena Hospedagem Pet",
     description:
-      "Seu pet cuidado como parte da casa: hospedagem familiar, sem gaiolas e com acompanhamento diário.",
+      "Seu pet cuidado como parte da casa: hospedagem familiar, sem baias e com acompanhamento diário.",
     url: siteUrl,
     siteName: "Tia Nena Hospedagem Pet",
     locale: "pt_BR",

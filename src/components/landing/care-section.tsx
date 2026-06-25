@@ -12,7 +12,7 @@ export function CareSection() {
               align="left"
               eyebrow="Cuidado com critério"
               title="Não é canil. É uma rotina de casa pensada para o seu cão."
-              description="A proposta é simples: menos improviso e mais observação. Antes de confirmar a hospedagem, a Tia Nena entende comportamento, saúde, rotina e necessidades específicas."
+              description="Antes de confirmar a hospedagem, a Tia Nena entende comportamento, saúde, rotina e necessidades específicas."
             />
           </div>
 

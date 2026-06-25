@@ -76,7 +76,7 @@ export const trustHighlights: IconCard[] = [
 
 export const carePoints: IconCard[] = [
   {
-    title: "Sem gaiolas",
+    title: "Sem baias",
     description: "Seu cão circula em ambiente familiar e supervisionado, com limites claros e seguros.",
     icon: ShieldCheck,
   },
@@ -114,12 +114,12 @@ export const services: IconCard[] = [
     icon: HeartPulse,
   },
   {
-    title: "Pós-cirúrgico leve",
+    title: "Pós-cirúrgico",
     description: "Suporte para tutores que precisam de acompanhamento e ambiente tranquilo após orientação veterinária.",
     icon: Activity,
   },
   {
-    title: "Passeios e estímulo",
+    title: "Passeios",
     description: "Atividades proporcionais à energia, idade e adaptação do pet.",
     icon: PawPrint,
   },
@@ -170,16 +170,18 @@ export const testimonials = [
 ];
 
 export const gallery = [
-  { src: "/images/bisteca.jpeg", caption: "Bisteca aproveitando o espaço" },
-  { src: "/images/dog1.jpeg", caption: "Tarde tranquila" },
-  { src: "/images/dog2.jpeg", caption: "Hóspede à vontade" },
-  { src: "/images/gabi.jpeg", caption: "Gabi na rotina" },
-  { src: "/images/lolo-banco.jpeg", caption: "Lolo no banco favorito" },
-  { src: "/images/lolo-coberta.jpeg", caption: "Lolo bem quentinho" },
-  { src: "/images/nina.jpeg", caption: "Nina tranquila e à vontade" },
-  { src: "/images/ozzy.jpeg", caption: "Ozzy explorando a casa" },
-  { src: "/images/pirata.jpeg", caption: "Pirata na estadia" },
-  { src: "/images/pos-operatorio.jpeg", caption: "Cuidado pós-cirúrgico" },
+  { src: "/images/bisteca.jpeg", caption: "Bistecão" },
+  { src: "/images/Tekila.jpg", caption: "Tekila" },
+  { src: "/images/batata.png", caption: "Batata" },
+  { src: "/images/Bob.png", caption: "Bob" },
+  { src: "/images/dog2.jpeg", caption: "Kiba" },
+  { src: "/images/gabi.jpeg", caption: "Gabizinha" },
+  { src: "/images/lolo-banco.jpeg", caption: "Lolô" },
+  { src: "/images/lolo-coberta.jpeg", caption: "Lolô - beeeem quentinho" },
+  { src: "/images/nina.jpeg", caption: "Nina" },
+  { src: "/images/ozzy.jpeg", caption: "Ozzy" },
+  { src: "/images/pirata.jpeg", caption: "Pirata" },
+  { src: "/images/pos-operatorio.jpeg", caption: "Luke - Cuidado pós-cirúrgico" },
 ];
 
 export const faqs = [
@@ -189,7 +191,7 @@ export const faqs = [
       "A hospedagem depende de uma avaliação prévia. O objetivo é garantir segurança, adaptação e bem-estar para o seu pet e para os outros hóspedes.",
   },
   {
-    question: "Meu cachorro fica em gaiola?",
+    question: "Meu cachorro fica em baia?",
     answer:
       "Não. A proposta da Tia Nena é oferecer hospedagem familiar, em ambiente de casa, com supervisão e rotina organizada.",
   },

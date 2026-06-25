@@ -17,7 +17,7 @@ export default function HomePage() {
     "@type": "LocalBusiness",
     name: brand.name,
     description:
-      "Hospedagem familiar para cães, sem gaiolas, com rotina individual e atualizações diárias.",
+      "Hospedagem familiar para cães, sem baias, com rotina individual e atualizações diárias.",
     telephone: brand.phone,
     address: {
       "@type": "PostalAddress",
