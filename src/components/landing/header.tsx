@@ -32,7 +32,7 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 border-b border-ink/10 bg-white transition-shadow duration-200",
+        "fixed inset-x-0 top-0 z-50 border-b-2 border-[#E8A800] bg-white transition-shadow duration-200",
         scrolled && "shadow-[0_10px_28px_rgba(28,28,28,0.08)]",
       )}
     >
@@ -91,7 +91,7 @@ export function Header() {
       <div
         id="mobile-menu"
         className={cn(
-          "grid overflow-hidden border-t border-ink/10 bg-white transition-[grid-template-rows] duration-200 lg:hidden",
+          "grid overflow-hidden border-t-2 border-[#E8A800] bg-white transition-[grid-template-rows] duration-200 lg:hidden",
           open ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
         )}
       >
