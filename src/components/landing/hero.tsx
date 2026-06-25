@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CheckCircle2, HeartPulse, ShieldCheck } from "lucide-react";
+import { CheckCircle2, ShieldCheck } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -18,7 +18,7 @@ export function Hero() {
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 rounded-full border border-honey/40 bg-white/75 px-4 py-2 text-sm font-bold text-cocoa shadow-sm backdrop-blur">
             <ShieldCheck className="h-4 w-4 text-ink" aria-hidden />
-            Hospedagem familiar, sem gaiolas e com acompanhamento diário.
+            Hospedagem familiar, sem baias e com acompanhamento diário.
           </div>
 
           <h1
@@ -30,7 +30,7 @@ export function Hero() {
 
           <p className="mt-7 max-w-2xl text-lg leading-8 text-ink/72 sm:text-xl">
             A Tia Nena recebe cães em um ambiente acolhedor, com rotina individual,
-            supervisão atenta e comunicação próxima com os tutores.
+            supervisão durante 24 horas e comunicação próxima com os tutores.
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -51,32 +51,19 @@ export function Hero() {
             <div className="rounded-[2rem] bg-gradient-to-br from-cream via-sand to-white p-6">
               <div className="relative min-h-[420px] overflow-hidden rounded-[1.6rem] border border-ink/8 bg-cream">
                 <Image
-                  src="/images/nena.jpeg"
-                  alt="Nena, hóspede da Tia Nena Hospedagem"
+                  src="/images/zequinha-nena.png"
+                  alt="Zequinha e Tia Nena"
                   fill
                   className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
                 />
 
-                <div className="absolute left-5 top-5 rounded-3xl bg-white/88 p-4 shadow-card backdrop-blur">
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-honey text-ink">
-                      <HeartPulse className="h-5 w-5" aria-hidden />
-                    </span>
-                    <div>
-                      <p className="font-heading text-sm font-black text-ink">Cuidado senior</p>
-                      <p className="text-xs font-semibold text-ink/55">ritmo respeitado</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="absolute bottom-5 right-5 rounded-3xl bg-ink p-4 text-white shadow-card">
+<div className="absolute bottom-5 right-5 rounded-3xl bg-ink p-4 text-white shadow-card">
                   <div className="flex items-center gap-3">
                     <CheckCircle2 className="h-5 w-5 text-honey" aria-hidden />
                     <div>
-                      <p className="font-heading text-sm font-black">Atualização enviada</p>
-                      <p className="text-xs text-white/65">foto + rotina do dia</p>
+                      <p className="font-heading text-sm font-black">Foto da Tia Nena com o aUmigo Zequinha!</p>
                     </div>
                   </div>
                 </div>
