@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CheckCircle2, HeartPulse, ShieldCheck } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -49,14 +50,14 @@ export function Hero() {
           <div className="relative rounded-[2.5rem] border border-white/80 bg-white/82 p-5 shadow-soft backdrop-blur">
             <div className="rounded-[2rem] bg-gradient-to-br from-cream via-sand to-white p-6">
               <div className="relative min-h-[420px] overflow-hidden rounded-[1.6rem] border border-ink/8 bg-cream">
-                <div className="absolute inset-x-8 bottom-8 h-36 rounded-t-[5rem] bg-honey/28" />
-                <div className="absolute left-1/2 top-20 h-44 w-56 -translate-x-1/2 rounded-[48%] bg-cocoa/90 shadow-[inset_-18px_-12px_0_rgba(0,0,0,0.12)]" />
-                <div className="absolute left-[31%] top-16 h-24 w-16 rotate-[-18deg] rounded-full bg-cocoa/90" />
-                <div className="absolute right-[31%] top-16 h-24 w-16 rotate-[18deg] rounded-full bg-cocoa/90" />
-                <div className="absolute left-1/2 top-[9.4rem] h-20 w-28 -translate-x-1/2 rounded-[50%] bg-[#8B5D33]" />
-                <div className="absolute left-[44%] top-[11.4rem] h-3 w-3 rounded-full bg-ink" />
-                <div className="absolute right-[44%] top-[11.4rem] h-3 w-3 rounded-full bg-ink" />
-                <div className="absolute left-1/2 top-[12.7rem] h-5 w-6 -translate-x-1/2 rounded-b-full bg-ink" />
+                <Image
+                  src="/images/nena.jpeg"
+                  alt="Nena, hóspede da Tia Nena Hospedagem"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority
+                />
 
                 <div className="absolute left-5 top-5 rounded-3xl bg-white/88 p-4 shadow-card backdrop-blur">
                   <div className="flex items-center gap-3">
