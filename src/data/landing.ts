@@ -169,11 +169,17 @@ export const testimonials = [
   },
 ];
 
-export const galleryPlaceholders = [
-  "Soneca depois do passeio",
-  "Rotina com supervisão",
-  "Espaço livre de gaiolas",
-  "Atualizações para tutores",
+export const gallery = [
+  { src: "/images/bisteca.jpeg", caption: "Bisteca aproveitando o espaço" },
+  { src: "/images/dog1.jpeg", caption: "Tarde tranquila" },
+  { src: "/images/dog2.jpeg", caption: "Hóspede à vontade" },
+  { src: "/images/gabi.jpeg", caption: "Gabi na rotina" },
+  { src: "/images/lolo-banco.jpeg", caption: "Lolo no banco favorito" },
+  { src: "/images/lolo-coberta.jpeg", caption: "Lolo bem quentinho" },
+  { src: "/images/nina.jpeg", caption: "Nina tranquila e à vontade" },
+  { src: "/images/ozzy.jpeg", caption: "Ozzy explorando a casa" },
+  { src: "/images/pirata.jpeg", caption: "Pirata na estadia" },
+  { src: "/images/pos-operatorio.jpeg", caption: "Cuidado pós-cirúrgico" },
 ];
 
 export const faqs = [
