@@ -2,7 +2,6 @@ import { Star } from "lucide-react";
 
 import { Container } from "@/components/ui/container";
 import { testimonials } from "@/data/landing";
-import { ImageCarousel } from "@/components/landing/image-carousel";
 import { SectionHeading } from "@/components/landing/section-heading";
 
 export function TestimonialsSection() {
@@ -14,10 +13,6 @@ export function TestimonialsSection() {
           title="O tutor precisa confiar antes de viajar tranquilo."
           description="Quem deixa seu pet aos cuidados de outra pessoa precisa sentir segurança. Por isso, a experiência de outros tutores ajuda a mostrar como o cuidado acontece na prática."
         />
-
-        <div className="mt-12">
-          <ImageCarousel />
-        </div>
 
         <div className="mt-12 grid gap-5 lg:grid-cols-3">
           {testimonials.map((testimonial) => (
