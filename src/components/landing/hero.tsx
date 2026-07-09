@@ -1,10 +1,9 @@
 import Image from "next/image";
-import { CheckCircle2, ShieldCheck } from "lucide-react";
+import { CheckCircle2, Instagram, ShieldCheck } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { WhatsappIcon } from "@/components/icons/whatsapp-icon";
-import { links } from "@/data/landing";
+import { brand } from "@/data/landing";
 
 export function Hero() {
   return (
@@ -34,10 +33,10 @@ export function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Button asChild size="lg" variant="accent">
-              <a href={links.assessment} target="_blank" rel="noreferrer">
-                <WhatsappIcon className="h-5 w-5" />
-                Agendar avaliação
+            <Button asChild size="lg" variant="instagram">
+              <a href={brand.instagram} target="_blank" rel="noreferrer">
+                <Instagram className="h-5 w-5" aria-hidden />
+                Ver nosso Instagram
               </a>
             </Button>
           </div>

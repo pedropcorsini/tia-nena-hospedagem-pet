@@ -71,7 +71,18 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col gap-3 border-t border-ink/10 pt-6 text-sm font-semibold text-ink/50 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} {brand.name}. Todos os direitos reservados.</p>
-          <p>Desenvolvido por Pedro Passos Corsini.</p>
+          <p>
+            Desenvolvido por{" "}
+            <a
+              href="https://github.com/pedropcorsini"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-sm text-ink/70 underline decoration-honey/70 underline-offset-4 transition-colors duration-200 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-honey"
+            >
+              Pedro Passos Corsini
+            </a>
+            .
+          </p>
         </div>
       </Container>
     </footer>
