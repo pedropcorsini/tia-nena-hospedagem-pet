@@ -16,7 +16,7 @@ const buttonVariants = cva(
         whatsapp:
           "border-2 border-[#25D366] bg-[#25D366] text-ink shadow-[0_12px_26px_rgba(37,211,102,0.24)] hover:border-[#1ebe5d] hover:bg-[#1ebe5d]",
         instagram:
-          "border-2 border-transparent bg-[linear-gradient(135deg,#833AB4_0%,#E1306C_48%,#F77737_100%)] text-white shadow-[0_12px_26px_rgba(225,48,108,0.24)] hover:brightness-105",
+          "overflow-hidden border-2 border-ink bg-ink text-white shadow-[0_12px_26px_rgba(28,28,28,0.18)] hover:border-[#111111] hover:bg-[#111111]",
         outline:
           "border-2 border-ink/15 bg-white text-ink hover:border-honey/70 hover:bg-honey/12",
         ghost: "border-2 border-transparent text-ink hover:bg-ink/5",
