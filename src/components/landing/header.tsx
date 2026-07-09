@@ -59,15 +59,21 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="rounded-full px-4 py-2 font-heading text-sm font-bold text-ink/72 transition-colors duration-200 hover:bg-white hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-honey"
+                className="group rounded-full px-4 py-2 font-heading text-sm font-bold text-ink/72 transition-[color,transform] duration-200 ease-out hover:-translate-y-0.5 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-honey focus-visible:text-ink"
               >
-                {item.label}
+                <span className="relative inline-block">
+                  {item.label}
+                  <span
+                    aria-hidden="true"
+                    className="absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 rounded-full bg-honey transition-transform duration-300 ease-out group-hover:scale-x-100 group-focus-visible:scale-x-100"
+                  />
+                </span>
               </Link>
             ))}
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <Button asChild variant="accent" size="md">
+            <Button asChild variant="whatsapp" size="md">
               <a href={links.scheduleVisit} target="_blank" rel="noreferrer">
                 <WhatsappIcon className="h-4 w-4" />
                 Agendar visita
@@ -108,7 +114,7 @@ export function Header() {
                   {item.label}
                 </Link>
               ))}
-              <Button asChild variant="accent" size="lg" className="mt-2 w-full">
+              <Button asChild variant="whatsapp" size="lg" className="mt-2 w-full">
                 <a href={links.scheduleVisit} target="_blank" rel="noreferrer">
                   <WhatsappIcon className="h-5 w-5" />
                   Agendar visita

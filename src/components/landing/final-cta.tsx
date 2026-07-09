@@ -23,7 +23,7 @@ export function FinalCta() {
               </p>
             </div>
             <div className="flex flex-col gap-3 sm:flex-row lg:flex-col">
-              <Button asChild size="lg" variant="ghost" className="border-white/18 text-white hover:bg-white/10">
+              <Button asChild size="lg" variant="whatsapp">
                 <a href={links.assessment} target="_blank" rel="noreferrer">
                   <WhatsappIcon className="h-5 w-5" />
                   Agendar avaliação

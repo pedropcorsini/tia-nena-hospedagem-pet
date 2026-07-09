@@ -26,7 +26,7 @@ export const brand = {
   phone: "(11) 95903-1252",
   whatsapp: "5511959031252",
   city: "São Paulo, SP",
-  instagram: "https://www.instagram.com/",
+  instagram: "https://www.instagram.com/tianenahospedagem/",
 };
 
 export const navItems = [
