@@ -150,22 +150,27 @@ export const processSteps = [
 
 export const testimonials = [
   {
+    quote: [
+      "Ter a Nena na minha vida e na do Wilson mudou tudo.",
+      "O Wilson, ou melhor, o senhor Wilson, passou por muita coisa antes de ser resgatado, e os traumas faziam com que ele tivesse medo de outros cães e só se sentisse seguro comigo ou com meus pais.",
+      "Quando precisei deixá-lo sozinho, conheci a Creche da Tia Nena. Na primeira vez ele estava inseguro, mas, aos poucos, ela conquistou a confiança dele. Hoje vejo um Wilson leve, que brinca, passeia, faz amigos e aproveita cada momento.",
+      "Mais do que um lugar para ficar enquanto estou fora, a Nena deu ao Wilson a oportunidade de voltar a confiar e ser feliz. E isso não tem preço.",
+      "Obrigada por cuidar dele com tanto amor e por ser, de verdade, a segunda mãe do Wilson.",
+    ].join("\n\n"),
+    author: "Marcela",
+    pet: "tutora do Wilson",
+  },
+  {
+    quote:
+      "A experiência em deixar os meus cachorros foi muito boa, foram muito bem recebidos e cuidados, dando atenção e carinho aos meus meninos, o que me faz sempre deixá-los em suas mãos. Recomendo e indico, pois o cuidado, amor e a dedicação fazem toda a diferença na hora de recomendar. Parabéns e obrigada por sempre nos atenderem bem.",
+    author: "Rosângela",
+    pet: "tutora do Arthur e Romeu",
+  },
+  {
     quote:
       "A diferença foi perceber que meu cachorro não ficou apenas hospedado. Ele foi cuidado como parte da casa.",
     author: "Mariana S.",
     pet: "tutora do Bento",
-  },
-  {
-    quote:
-      "Receber fotos todos os dias me deixou tranquila. A adaptação foi respeitosa e sem correria.",
-    author: "Renata M.",
-    pet: "tutora da Lola",
-  },
-  {
-    quote:
-      "Meu cão é idoso e precisa de mais paciência. A Tia Nena entendeu exatamente o que ele precisava.",
-    author: "Carlos A.",
-    pet: "tutor do Theo",
   },
 ];
 

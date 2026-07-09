@@ -1,6 +1,7 @@
 import { Star } from "lucide-react";
 
 import { Container } from "@/components/ui/container";
+import { ExpandableTestimonial } from "@/components/landing/expandable-testimonial";
 import { testimonials } from "@/data/landing";
 import { SectionHeading } from "@/components/landing/section-heading";
 
@@ -25,9 +26,7 @@ export function TestimonialsSection() {
                   <Star key={index} className="h-5 w-5 fill-current" aria-hidden />
                 ))}
               </div>
-              <blockquote className="mt-6 text-lg font-semibold leading-8 text-ink">
-                “{testimonial.quote}”
-              </blockquote>
+              <ExpandableTestimonial quote={testimonial.quote} />
               <figcaption className="mt-7 border-t border-ink/8 pt-5">
                 <p className="font-heading text-base font-black text-ink">{testimonial.author}</p>
                 <p className="text-sm font-semibold text-ink/55">{testimonial.pet}</p>
