@@ -4,34 +4,6 @@ Landing page moderna para a Tia Nena Hospedagem, com foco em conversão pelo Wha
 
 ## Stack
 
-- Next.js com App Router
-- TypeScript
-- Tailwind CSS
-- Componentes reutilizáveis inspirados em shadcn/ui
-- Lucide React para iconografia SVG
+[![Stack](https://skillicons.dev/icons?i=nextjs,tailwind,typescript)](https://skillicons.dev)
 
-## Comandos
-
-```bash
-npm install
-npm run dev
-npm run lint
-npm run typecheck
-npm run build
-```
-
-## Fluxo Git
-
-- `main`: versão estável.
-- `develop`: desenvolvimento ativo.
-- Commits seguem Conventional Commits.
-
-## Identidade Visual
-
-- Logo oficial preservada em `public/images/logo-tia-nena.png`.
-- Paleta principal: amarelo mel `#E8A800`, preto suave `#1C1C1C`, branco `#FFFFFF` e creme `#FFFBF3`.
-- Header fixo no topo, sem navbar flutuante.
-
-## Conteudo
-
-Os textos, links de WhatsApp, navegação e dados das seções ficam centralizados em `src/data/landing.ts`.
+*Desenvolvido por Pedro Passos Corsini*
