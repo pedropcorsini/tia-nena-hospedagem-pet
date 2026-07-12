@@ -167,10 +167,13 @@ export const testimonials = [
     pet: "tutora do Arthur e Romeu",
   },
   {
-    quote:
-      "A diferença foi perceber que meu cachorro não ficou apenas hospedado. Ele foi cuidado como parte da casa.",
-    author: "Mariana S.",
-    pet: "tutora do Bento",
+    quote: [
+      "A Tia Nena é um anjo que Deus colocou na minha vida. O Ozzy já tinha sido reprovado em 3 creches por não ser sociável com outros cães além da irmã. Ela ia para uma creche (daquelas cheiaaas de cachorros) e ele ficava sozinho em casa, triste.",
+      "A Van teve toda a paciência do mundo para acolhê-lo e aos poucos ir socializando com os demais cachorros. O fato de ser uma casa, com poucos cães, ambiente familiar, é maravilhoso! Eles AMAM, tremem de emoção quando saem no táxi dog. Quando eu preciso viajar, a Van sempre me socorre e hospeda minha duplinha - eu fico totalmente tranquila pois sei que eles estão no melhor lugar, na segunda casa deles.",
+      "Eu sou imensamente grata pela Tia Nena e sua família por todo amor e cuidado com meus filhos de 4 patas.",
+    ].join("\n\n"),
+    author: "Ana Júlia",
+    pet: "tutora do Ozzy e Gaia",
   },
 ];
 
