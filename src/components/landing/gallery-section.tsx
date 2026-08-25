@@ -29,7 +29,7 @@ export function GallerySection() {
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                 />
               </div>
-              <figcaption className="px-4 py-3 text-sm font-semibold leading-5 text-ink/65">
+              <figcaption className="px-4 py-3 text-center text-sm font-bold leading-5 text-ink/65">
                 {item.caption}
               </figcaption>
             </figure>

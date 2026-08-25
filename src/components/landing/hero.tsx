@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CheckCircle2, Instagram, ShieldCheck } from "lucide-react";
+import { CheckCircle2, Instagram } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -15,14 +15,9 @@ export function Hero() {
       <div className="absolute inset-x-0 top-20 h-px bg-gradient-to-r from-transparent via-honey/60 to-transparent" />
       <Container className="grid gap-12 pb-20 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:pb-24">
         <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-2 rounded-full border border-honey/40 bg-white/75 px-4 py-2 text-sm font-bold text-cocoa shadow-sm backdrop-blur">
-            <ShieldCheck className="h-4 w-4 text-ink" aria-hidden />
-            Hospedagem familiar, sem baias e com acompanhamento diário.
-          </div>
-
           <h1
             id="hero-title"
-            className="mt-7 font-heading text-5xl font-black leading-[0.98] tracking-[-0.045em] text-ink sm:text-6xl lg:text-7xl"
+            className="font-heading text-5xl font-black leading-[0.98] tracking-[-0.045em] text-ink sm:text-6xl lg:text-7xl"
           >
             Seu pet cuidado como parte da casa.
           </h1>

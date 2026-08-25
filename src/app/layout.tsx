@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
-import { Nunito_Sans, Varela_Round } from "next/font/google";
+import { Manrope, Unbounded } from "next/font/google";
 import type { ReactNode } from "react";
 
 import "./globals.css";
 
-const varelaRound = Varela_Round({
+const unbounded = Unbounded({
   subsets: ["latin"],
-  weight: "400",
+  weight: ["600", "800"],
   variable: "--font-heading",
   display: "swap",
 });
 
-const nunitoSans = Nunito_Sans({
+const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="pt-BR" className={`${varelaRound.variable} ${nunitoSans.variable}`}>
+    <html lang="pt-BR" className={`${unbounded.variable} ${manrope.variable}`}>
       <body>{children}</body>
     </html>
   );
