@@ -8,8 +8,6 @@ export function FinalCta() {
     <section className="bg-white py-20 sm:py-24" aria-label="Agendar avaliação">
       <Container>
         <div className="relative overflow-hidden rounded-[2.5rem] bg-ink p-8 text-white shadow-soft sm:p-12 lg:p-16">
-          <div className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-honey/25 blur-2xl" />
-          <div className="absolute -bottom-20 left-12 h-56 w-56 rounded-full bg-honey/20 blur-2xl" />
           <div className="relative grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
             <div className="max-w-3xl">
               <p className="font-heading text-xs font-extrabold uppercase tracking-[0.22em] text-honey">
