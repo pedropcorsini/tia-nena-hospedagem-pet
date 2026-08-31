@@ -1,6 +1,5 @@
 import {
   Activity,
-  Bone,
   Camera,
   CalendarCheck,
   CheckCircle2,
@@ -9,6 +8,7 @@ import {
   HeartHandshake,
   HeartPulse,
   Home,
+  Key,
   MapPin,
   MessageCircle,
   PawPrint,
@@ -124,9 +124,9 @@ export const services: IconCard[] = [
     icon: PawPrint,
   },
   {
-    title: "Socialização assistida",
-    description: "Contato gradual e supervisionado, sem forçar interações que gerem estresse.",
-    icon: Bone,
+    title: "Petsitter",
+    description: "Visitas na casa do seu pet para alimentação, passeio e companhia, sem tirá-lo da rotina que já conhece.",
+    icon: Key,
   },
 ];
 
