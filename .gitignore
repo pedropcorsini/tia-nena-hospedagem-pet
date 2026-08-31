@@ -20,4 +20,6 @@ Thumbs.db
 .vercel/
 .opencode/
 
+CLAUDE.md
+
 *.tsbuildinfo
