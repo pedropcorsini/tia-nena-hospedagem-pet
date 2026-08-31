@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CheckCircle2, Instagram } from "lucide-react";
+import { Instagram } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -9,61 +9,44 @@ export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative overflow-hidden bg-warm-radial pt-32 sm:pt-36 lg:pt-40"
+      className="relative isolate flex min-h-[85svh] items-center overflow-hidden bg-ink pt-28 sm:pt-32"
       aria-labelledby="hero-title"
     >
-      <div className="absolute inset-x-0 top-20 h-px bg-gradient-to-r from-transparent via-honey/60 to-transparent" />
-      <Container className="grid gap-12 pb-20 lg:grid-cols-[1.02fr_0.98fr] lg:items-center lg:pb-24">
-        <div className="max-w-3xl">
-          <h1
-            id="hero-title"
-            className="font-heading text-5xl font-black leading-[0.98] tracking-[-0.045em] text-ink sm:text-6xl lg:text-7xl"
+      <Image
+        src="/images/hero-fundo.png"
+        alt=""
+        fill
+        priority
+        className="object-cover object-center"
+        sizes="100vw"
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-ink/75 via-ink/40 to-ink/80" />
+
+      <Container className="relative z-10 flex flex-col items-center py-16 text-center sm:py-20">
+        <h1
+          id="hero-title"
+          className="max-w-4xl font-heading text-5xl font-black leading-[0.98] tracking-[-0.045em] text-white sm:text-6xl lg:text-7xl"
+        >
+          Seu pet cuidado como parte da casa.
+        </h1>
+
+        <p className="mt-7 max-w-2xl text-lg leading-8 text-white/80 sm:text-xl">
+          A Tia Nena recebe cães em um ambiente acolhedor, com rotina individual,
+          supervisão durante 24 horas e comunicação próxima com os tutores.
+        </p>
+
+        <div className="mt-9 flex justify-center">
+          <Button
+            asChild
+            size="lg"
+            variant="instagram"
+            className="border-white/40 bg-white/15 text-white shadow-none backdrop-blur-md hover:border-white hover:bg-white/25"
           >
-            Seu pet cuidado como parte da casa.
-          </h1>
-
-          <p className="mt-7 max-w-2xl text-lg leading-8 text-ink/72 sm:text-xl">
-            A Tia Nena recebe cães em um ambiente acolhedor, com rotina individual,
-            supervisão durante 24 horas e comunicação próxima com os tutores.
-          </p>
-
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-            <Button asChild size="lg" variant="instagram">
-              <a href={brand.instagram} target="_blank" rel="noreferrer">
-                <Instagram className="h-5 w-5" aria-hidden />
-                Ver nosso Instagram
-              </a>
-            </Button>
-          </div>
-        </div>
-
-        <div className="relative mx-auto w-full max-w-xl lg:max-w-none">
-          <div className="absolute -left-6 top-10 h-28 w-28 rounded-full bg-honey/25 blur-2xl" />
-          <div className="absolute -right-5 bottom-10 h-36 w-36 rounded-full bg-ink/10 blur-2xl" />
-
-          <div className="relative rounded-[2.5rem] border border-white/80 bg-white/82 p-5 shadow-soft backdrop-blur">
-            <div className="rounded-[2rem] bg-gradient-to-br from-cream via-sand to-white p-6">
-              <div className="relative min-h-[420px] overflow-hidden rounded-[1.6rem] border border-ink/8 bg-cream">
-                <Image
-                  src="/images/zequinha-nena.png"
-                  alt="Zequinha e Tia Nena"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  priority
-                />
-
-<div className="absolute bottom-5 right-5 rounded-3xl bg-ink p-4 text-white shadow-card">
-                  <div className="flex items-center gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-honey" aria-hidden />
-                    <div>
-                      <p className="font-heading text-sm font-black">Foto da Tia Nena com o aUmigo Zequinha!</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+            <a href={brand.instagram} target="_blank" rel="noreferrer">
+              <Instagram className="h-5 w-5" aria-hidden />
+              Instagram
+            </a>
+          </Button>
         </div>
       </Container>
     </section>
