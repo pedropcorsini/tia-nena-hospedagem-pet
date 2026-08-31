@@ -15,11 +15,11 @@ export function TestimonialsSection() {
           description="Quem deixa seu pet aos cuidados de outra pessoa precisa sentir segurança. Por isso, a experiência de outros tutores ajuda a mostrar como o cuidado acontece na prática."
         />
 
-        <div className="mt-12 grid gap-5 lg:grid-cols-3">
+        <div className="mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 [-ms-overflow-style:none] [scrollbar-width:none] lg:flex-wrap lg:justify-center lg:overflow-visible lg:pb-0 lg:snap-none [&::-webkit-scrollbar]:hidden">
           {testimonials.map((testimonial) => (
             <figure
               key={testimonial.author}
-              className="rounded-[2rem] border border-ink/8 bg-white p-6 shadow-card"
+              className="w-[85%] shrink-0 snap-start rounded-[2rem] border border-ink/8 bg-white p-6 shadow-card lg:w-[calc((100%-2.5rem)/3)]"
             >
               <div className="flex gap-1 text-honey" aria-label="Avaliação 5 estrelas">
                 {Array.from({ length: 5 }).map((_, index) => (
