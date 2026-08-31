@@ -175,6 +175,15 @@ export const testimonials = [
     author: "Ana Júlia",
     pet: "tutora do Ozzy e Gaia",
   },
+  {
+    quote: [
+      "Quero falar um pouco sobre o trabalho incrível da Tia Nena (Vanessa), que cuida dos nossos amigos de quatro patas com tanto carinho e dedicação. Um hotel/creche que é um verdadeiro paraíso para os meus gordos!",
+      "Gordo, Mada e Kati sempre foram felizes aos seus cuidados… agora tenho o Lorenzo e a Gabriela que ficam todos os dias e muitas noites sob os seus cuidados, e eu fico tranquila, sabendo que estão em excelentes mãos.",
+      "A Tia Nena (Vanessa) tem um jeito especial de entender cada um deles, proporcionando amor, atenção e atividades que eles adoram. O ambiente é seguro e acolhedor, e posso dizer com certeza que ela faz tudo com paixão. Por isso, a indico de olhos fechados para quem procura um lugar confiável e carinhoso para deixar seus pets. Com certeza, Lorenzo e Gabriela e recentemente o Joca sempre saem felizes e saudáveis de lá!",
+    ].join("\n\n"),
+    author: "Elaine",
+    pet: "tutora do Joca, Gabi e Lolô",
+  },
 ];
 
 export const gallery = [
