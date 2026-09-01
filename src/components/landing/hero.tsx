@@ -27,7 +27,7 @@ export function Hero() {
           id="hero-title"
           className="max-w-4xl font-heading text-5xl font-black leading-[0.98] tracking-[-0.045em] text-white sm:text-6xl lg:text-7xl"
         >
-          Seu pet cuidado como parte da casa.
+          Seu pet cuidado como parte da família.
         </h1>
 
         <p className="mt-7 max-w-2xl text-lg leading-8 text-white/80 sm:text-xl">
