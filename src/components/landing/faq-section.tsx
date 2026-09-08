@@ -1,6 +1,11 @@
+"use client";
+
+import { useEffect, useId, useRef, useState } from "react";
+
 import { Container } from "@/components/ui/container";
 import { faqs } from "@/data/landing";
 import { SectionHeading } from "@/components/landing/section-heading";
+import { cn } from "@/lib/utils";
 
 export function FaqSection() {
   return (
@@ -18,24 +23,60 @@ export function FaqSection() {
 
           <div className="space-y-4">
             {faqs.map((faq) => (
-              <details
-                key={faq.question}
-                className="group rounded-[1.6rem] border border-ink/8 bg-white p-5 shadow-sm open:border-honey/55"
-              >
-                <summary className="cursor-pointer list-none font-heading text-lg font-black text-ink marker:hidden">
-                  <span className="flex items-center justify-between gap-5">
-                    {faq.question}
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-honey/18 text-ink transition-transform duration-200 group-open:rotate-45">
-                      +
-                    </span>
-                  </span>
-                </summary>
-                <p className="mt-4 leading-7 text-ink/66">{faq.answer}</p>
-              </details>
+              <FaqItem key={faq.question} question={faq.question} answer={faq.answer} />
             ))}
           </div>
         </div>
       </Container>
     </section>
+  );
+}
+
+function FaqItem({ question, answer }: { question: string; answer: string }) {
+  const [open, setOpen] = useState(false);
+  const [contentHeight, setContentHeight] = useState(0);
+  const contentRef = useRef<HTMLParagraphElement>(null);
+  const contentId = useId();
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setContentHeight(contentRef.current.scrollHeight);
+    }
+  }, [answer]);
+
+  return (
+    <div
+      className={cn(
+        "rounded-[1.6rem] border border-ink/8 bg-white p-5 shadow-sm",
+        open && "border-honey/55",
+      )}
+    >
+      <button
+        type="button"
+        className="flex w-full list-none items-center justify-between gap-5 text-left font-heading text-lg font-black text-ink"
+        aria-expanded={open}
+        aria-controls={contentId}
+        onClick={() => setOpen((current) => !current)}
+      >
+        {question}
+        <span
+          className={cn(
+            "flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-honey/18 text-ink transition-transform duration-200",
+            open && "rotate-45",
+          )}
+        >
+          +
+        </span>
+      </button>
+      <div
+        id={contentId}
+        className="overflow-hidden transition-[max-height] duration-200 ease-in-out"
+        style={{ maxHeight: open ? `${contentHeight}px` : "0px" }}
+      >
+        <div ref={contentRef} className="pt-4">
+          <p className="leading-7 text-ink/66">{answer}</p>
+        </div>
+      </div>
+    </div>
   );
 }
