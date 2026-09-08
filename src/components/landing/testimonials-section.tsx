@@ -1,20 +1,114 @@
 "use client";
 
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import { Container } from "@/components/ui/container";
 import { ExpandableTestimonial } from "@/components/landing/expandable-testimonial";
 import { testimonials } from "@/data/landing";
 import { SectionHeading } from "@/components/landing/section-heading";
 
+const AUTOPLAY_SPEED_PX_PER_SEC = 28;
+const RESUME_DELAY_MS = 2500;
+const loopedTestimonials = [...testimonials, ...testimonials];
+
 export function TestimonialsSection() {
   const scrollerRef = useRef<HTMLDivElement>(null);
+  const isPausedRef = useRef(false);
+  const resumeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isDraggingRef = useRef(false);
+  const dragStartXRef = useRef(0);
+  const dragStartScrollLeftRef = useRef(0);
+  const reducedMotionRef = useRef(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    reducedMotionRef.current = mediaQuery.matches;
+    const handleChange = (event: MediaQueryListEvent) => {
+      reducedMotionRef.current = event.matches;
+    };
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
+  }, []);
+
+  useEffect(() => {
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
+
+    let frameId: number;
+    let lastTimestamp: number | null = null;
+
+    function wrapScrollPosition() {
+      if (!scroller) return;
+      const singleSetWidth = scroller.scrollWidth / 2;
+      if (scroller.scrollLeft >= singleSetWidth) {
+        scroller.scrollLeft -= singleSetWidth;
+      } else if (scroller.scrollLeft < 0) {
+        scroller.scrollLeft += singleSetWidth;
+      }
+    }
+
+    function tick(timestamp: number) {
+      if (!scroller) return;
+      if (lastTimestamp === null) lastTimestamp = timestamp;
+      const deltaSeconds = (timestamp - lastTimestamp) / 1000;
+      lastTimestamp = timestamp;
+
+      if (!isPausedRef.current && !isDraggingRef.current && !reducedMotionRef.current) {
+        scroller.scrollLeft += AUTOPLAY_SPEED_PX_PER_SEC * deltaSeconds;
+        wrapScrollPosition();
+      }
+
+      frameId = requestAnimationFrame(tick);
+    }
+
+    frameId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frameId);
+  }, []);
+
+  function pauseAutoplay() {
+    if (resumeTimeoutRef.current) clearTimeout(resumeTimeoutRef.current);
+    isPausedRef.current = true;
+  }
+
+  function scheduleResume() {
+    if (resumeTimeoutRef.current) clearTimeout(resumeTimeoutRef.current);
+    resumeTimeoutRef.current = setTimeout(() => {
+      isPausedRef.current = false;
+    }, RESUME_DELAY_MS);
+  }
 
   function scrollByPage(direction: 1 | -1) {
     const scroller = scrollerRef.current;
     if (!scroller) return;
+    pauseAutoplay();
     scroller.scrollBy({ left: direction * scroller.clientWidth * 0.9, behavior: "smooth" });
+    scheduleResume();
+  }
+
+  function handlePointerDown(event: React.PointerEvent<HTMLDivElement>) {
+    if (event.pointerType !== "mouse") return;
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
+    isDraggingRef.current = true;
+    pauseAutoplay();
+    dragStartXRef.current = event.clientX;
+    dragStartScrollLeftRef.current = scroller.scrollLeft;
+    scroller.setPointerCapture(event.pointerId);
+  }
+
+  function handlePointerMove(event: React.PointerEvent<HTMLDivElement>) {
+    if (!isDraggingRef.current) return;
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
+    scroller.scrollLeft = dragStartScrollLeftRef.current - (event.clientX - dragStartXRef.current);
+  }
+
+  function handlePointerUp(event: React.PointerEvent<HTMLDivElement>) {
+    if (event.pointerType !== "mouse") return;
+    isDraggingRef.current = false;
+    scrollerRef.current?.releasePointerCapture(event.pointerId);
+    scheduleResume();
   }
 
   return (
@@ -28,12 +122,20 @@ export function TestimonialsSection() {
 
         <div
           ref={scrollerRef}
-          className="mt-12 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={handlePointerUp}
+          onPointerLeave={handlePointerUp}
+          onMouseEnter={pauseAutoplay}
+          onMouseLeave={scheduleResume}
+          onTouchStart={pauseAutoplay}
+          onTouchEnd={scheduleResume}
+          className="mt-12 flex cursor-grab items-start gap-5 overflow-x-auto pb-4 active:cursor-grabbing [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {testimonials.map((testimonial) => (
+          {loopedTestimonials.map((testimonial, index) => (
             <figure
-              key={testimonial.author}
-              className="w-[85%] shrink-0 snap-start rounded-[2rem] border border-ink/8 bg-white p-6 shadow-card lg:w-[calc((100%-2.5rem)/3)]"
+              key={`${testimonial.author}-${index}`}
+              className="w-[85%] shrink-0 rounded-[2rem] border border-ink/8 bg-white p-6 shadow-card lg:w-[calc((100%-2.5rem)/3)]"
             >
               <div className="flex gap-1 text-honey" aria-label="Avaliação 5 estrelas">
                 {Array.from({ length: 5 }).map((_, index) => (

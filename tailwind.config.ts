@@ -24,6 +24,9 @@ const config: Config = {
       backgroundImage: {
         "warm-radial": "radial-gradient(circle at 20% 20%, rgba(232, 168, 0, 0.24), transparent 34%), radial-gradient(circle at 85% 12%, rgba(28, 28, 28, 0.08), transparent 24%), linear-gradient(135deg, #FFFBF3 0%, #FFFFFF 100%)",
       },
+      transitionTimingFunction: {
+        "out-strong": "cubic-bezier(0.23, 1, 0.32, 1)",
+      },
     },
   },
   plugins: [forms],

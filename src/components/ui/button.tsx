@@ -5,7 +5,7 @@ import type { ComponentPropsWithoutRef } from "react";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 rounded-full font-heading text-sm font-extrabold tracking-tight transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-honey disabled:pointer-events-none disabled:opacity-60",
+  "inline-flex items-center justify-center gap-2 rounded-full font-heading text-sm font-extrabold tracking-tight transition-[color,background-color,border-color,transform] duration-200 ease-out active:scale-[0.97] active:duration-150 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-honey disabled:pointer-events-none disabled:opacity-60",
   {
     variants: {
       variant: {

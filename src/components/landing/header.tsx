@@ -59,13 +59,13 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="group rounded-full px-4 py-2 font-heading text-sm font-bold text-ink/72 transition-[color,transform] duration-200 ease-out hover:-translate-y-0.5 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-honey focus-visible:text-ink"
+                className="group rounded-full px-4 py-2 font-heading text-sm font-bold text-ink/72 transition-[color,transform] duration-200 ease-out-strong hover:-translate-y-0.5 hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-honey focus-visible:text-ink"
               >
                 <span className="relative inline-block">
                   {item.label}
                   <span
                     aria-hidden="true"
-                    className="absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 rounded-full bg-honey transition-transform duration-300 ease-out group-hover:scale-x-100 group-focus-visible:scale-x-100"
+                    className="absolute -bottom-1 left-0 h-0.5 w-full origin-left scale-x-0 rounded-full bg-honey transition-transform duration-200 ease-out-strong group-hover:scale-x-100 group-focus-visible:scale-x-100"
                   />
                 </span>
               </Link>
