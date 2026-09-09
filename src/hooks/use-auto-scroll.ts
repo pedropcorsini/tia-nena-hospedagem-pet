@@ -114,6 +114,15 @@ export function useAutoScroll({ speedPxPerSec, direction = 1 }: UseAutoScrollOpt
     scheduleResume();
   }
 
+  // Mouse-only hover pause. Plain onMouseEnter/onMouseLeave must NOT be used
+  // here: iOS Safari replays synthetic mouse events after a tap, and the
+  // matching "leave" doesn't reliably fire, permanently pausing the row.
+  // Pointer events carry pointerType, so we can filter touch out explicitly.
+  function handlePointerEnter(event: React.PointerEvent<HTMLDivElement>) {
+    if (event.pointerType !== "mouse") return;
+    pauseAutoplay();
+  }
+
   return {
     scrollerRef,
     pauseAutoplay,
@@ -122,5 +131,6 @@ export function useAutoScroll({ speedPxPerSec, direction = 1 }: UseAutoScrollOpt
     handlePointerDown,
     handlePointerMove,
     handlePointerUp,
+    handlePointerEnter,
   };
 }
