@@ -16,8 +16,15 @@ const rows = [1, 2, 3].map((row) => {
 });
 
 function GalleryRow({ items, direction }: { items: typeof gallery; direction: 1 | -1 }) {
-  const { scrollerRef, pauseAutoplay, scheduleResume, handlePointerDown, handlePointerMove, handlePointerUp } =
-    useAutoScroll({ speedPxPerSec: AUTOPLAY_SPEED_PX_PER_SEC, direction });
+  const {
+    scrollerRef,
+    pauseAutoplay,
+    scheduleResume,
+    handlePointerDown,
+    handlePointerMove,
+    handlePointerUp,
+    handlePointerEnter,
+  } = useAutoScroll({ speedPxPerSec: AUTOPLAY_SPEED_PX_PER_SEC, direction });
 
   return (
     <div className="mx-auto w-full max-w-[728px] px-5 sm:max-w-[864px] sm:px-6 lg:max-w-[1020px] lg:px-8">
@@ -27,8 +34,7 @@ function GalleryRow({ items, direction }: { items: typeof gallery; direction: 1 
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
         onPointerLeave={handlePointerUp}
-        onMouseEnter={pauseAutoplay}
-        onMouseLeave={scheduleResume}
+        onPointerEnter={handlePointerEnter}
         onTouchStart={pauseAutoplay}
         onTouchEnd={scheduleResume}
         onTouchCancel={scheduleResume}

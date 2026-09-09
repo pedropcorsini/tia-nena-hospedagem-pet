@@ -20,6 +20,7 @@ export function TestimonialsSection() {
     handlePointerDown,
     handlePointerMove,
     handlePointerUp,
+    handlePointerEnter,
   } = useAutoScroll({ speedPxPerSec: AUTOPLAY_SPEED_PX_PER_SEC });
 
   return (
@@ -37,8 +38,7 @@ export function TestimonialsSection() {
           onPointerMove={handlePointerMove}
           onPointerUp={handlePointerUp}
           onPointerLeave={handlePointerUp}
-          onMouseEnter={pauseAutoplay}
-          onMouseLeave={scheduleResume}
+          onPointerEnter={handlePointerEnter}
           onTouchStart={pauseAutoplay}
           onTouchEnd={scheduleResume}
           onTouchCancel={scheduleResume}
