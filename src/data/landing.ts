@@ -203,6 +203,15 @@ export const testimonials = [
     author: "Lucas",
     pet: "tutor do Bob, Pirata e Billy",
   },
+  {
+    quote: [
+      "Está procurando alguém pra cuidar do seu pet quando você não está? Pode contar com a Tia Nena sem medo!",
+      "Ela é muito carinhosa com os pets, dá muita segurança em deixar. A Melzinha, minha pet, tem 14 aninhos e não costumava ficar, e quando eu precisei, ela se tornou assídua quando não posso viajar com a gente!",
+      "Só tenho a agradecer pelo carinho e cuidados com a Melzinha!",
+    ].join("\n\n"),
+    author: "Lu",
+    pet: "tutora da Mel",
+  },
 ];
 
 export const gallery = [
@@ -229,6 +238,7 @@ export const gallery = [
   { src: "/images/lolo-dormindinho.jpg", caption: "Lolô dormindinho", row: 3 },
   { src: "/images/gabi-dando-oi.jpg", caption: "Gabi dando oi<3", row: 3 },
   { src: "/images/baleia.jpeg", caption: "Baleia", row: 3 },
+  { src: "/images/mel.png", caption: "Mel", row: 3 },
 ] satisfies { src: string; caption: string; row: 1 | 2 | 3 }[];
 
 export const faqs = [
