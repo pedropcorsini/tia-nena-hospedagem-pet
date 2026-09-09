@@ -184,6 +184,16 @@ export const testimonials = [
     author: "Elaine",
     pet: "tutora do Joca, Gabi e Lolô",
   },
+  {
+    quote: [
+      "A Vanessa desde o primeiro contato, se mostrou muito atenciosa, fomos conhecer o local e gostamos.",
+      "A adaptação do Luck (Corgi) foi muito rápida, pets sociáveis, brincalhões, um ambiente acolhedor e familiar.",
+      "A Vanessa sempre cuidadosa, reportando o dia do pet com vídeos.",
+      "Recomendo o local para a hospedagem de seus Pets.",
+    ].join("\n\n"),
+    author: "Carlos",
+    pet: "tutor do Luck",
+  },
 ];
 
 export const gallery = [
