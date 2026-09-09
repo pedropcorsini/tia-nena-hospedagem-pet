@@ -41,6 +41,7 @@ export function TestimonialsSection() {
           onMouseLeave={scheduleResume}
           onTouchStart={pauseAutoplay}
           onTouchEnd={scheduleResume}
+          onTouchCancel={scheduleResume}
           className="mt-12 flex cursor-grab items-start gap-5 overflow-x-auto pb-4 active:cursor-grabbing [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {loopedTestimonials.map((testimonial, index) => (
