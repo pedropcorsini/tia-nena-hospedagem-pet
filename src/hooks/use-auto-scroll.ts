@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 
 const RESUME_DELAY_MS = 2500;
+const PAUSE_SAFETY_TIMEOUT_MS = 4000;
 
 type UseAutoScrollOptions = {
   speedPxPerSec: number;
@@ -72,6 +73,13 @@ export function useAutoScroll({ speedPxPerSec, direction = 1 }: UseAutoScrollOpt
   function pauseAutoplay() {
     if (resumeTimeoutRef.current) clearTimeout(resumeTimeoutRef.current);
     isPausedRef.current = true;
+    // Safety net: some mobile browsers don't reliably fire the matching
+    // touchend/touchcancel/pointerleave for every gesture (e.g. a page-scroll
+    // that starts over the row), which would otherwise leave it paused
+    // forever. This guarantees it always resumes on its own.
+    resumeTimeoutRef.current = setTimeout(() => {
+      isPausedRef.current = false;
+    }, PAUSE_SAFETY_TIMEOUT_MS);
   }
 
   function scheduleResume() {
