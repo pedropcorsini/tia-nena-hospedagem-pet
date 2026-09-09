@@ -194,6 +194,15 @@ export const testimonials = [
     author: "Carlos",
     pet: "tutor do Luck",
   },
+  {
+    quote: [
+      "Sempre quando viajo, deixo o trio com a Tia Nena.",
+      "Melhor lugar da ZN. Lugar que eu confio demais, que sei que meus cachorros estão sendo bem cuidados e recebendo o carinho de quem ama cachorro de verdade.",
+      "Quando vou buscar o trio, parece que não querem ir embora kkkk.",
+    ].join("\n\n"),
+    author: "Lucas",
+    pet: "tutor do Bob, Pirata e Billy",
+  },
 ];
 
 export const gallery = [
@@ -203,18 +212,23 @@ export const gallery = [
   { src: "/images/Bob.png", caption: "Bob", row: 1 },
   { src: "/images/buda.jpg", caption: "Buda", row: 1 },
   { src: "/images/tekila-2.jpg", caption: "Tekila", row: 1 },
+  { src: "/images/azeitonao.png", caption: "Azeitonão", row: 1 },
+  { src: "/images/luck.jpeg", caption: "Luck", row: 1 },
   { src: "/images/dog2.jpeg", caption: "Kiba", row: 2 },
   { src: "/images/gabi.jpeg", caption: "Gabizinha", row: 2 },
   { src: "/images/lolo-banco.jpeg", caption: "Lolô", row: 2 },
-  { src: "/images/lolo-coberta.jpeg", caption: "Lolô - beeeem quentinho", row: 2 },
-  { src: "/images/lolo-2.jpg", caption: "Lolô", row: 2 },
   { src: "/images/batatinha.jpg", caption: "Batatinha", row: 2 },
+  { src: "/images/lolo-coberta.jpeg", caption: "Lolô - beeeem quentinho", row: 2 },
+  { src: "/images/menino-dengoso.png", caption: "Menino Dengoso", row: 2 },
+  { src: "/images/lolo-2.jpg", caption: "Lolô", row: 2 },
+  { src: "/images/margarida-e-wilson.jpeg", caption: "Margarida e Wilson", row: 2 },
   { src: "/images/nina.jpeg", caption: "Nina", row: 3 },
   { src: "/images/ozzy.jpeg", caption: "Ozzy", row: 3 },
   { src: "/images/pirata.jpeg", caption: "Pirata", row: 3 },
   { src: "/images/pos-operatorio.jpeg", caption: "Luke - Cuidado pós-cirúrgico", row: 3 },
   { src: "/images/lolo-dormindinho.jpg", caption: "Lolô dormindinho", row: 3 },
   { src: "/images/gabi-dando-oi.jpg", caption: "Gabi dando oi<3", row: 3 },
+  { src: "/images/baleia.jpeg", caption: "Baleia", row: 3 },
 ] satisfies { src: string; caption: string; row: 1 | 2 | 3 }[];
 
 export const faqs = [
