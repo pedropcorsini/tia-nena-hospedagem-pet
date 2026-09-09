@@ -31,6 +31,7 @@ function GalleryRow({ items, direction }: { items: typeof gallery; direction: 1 
         onMouseLeave={scheduleResume}
         onTouchStart={pauseAutoplay}
         onTouchEnd={scheduleResume}
+        onTouchCancel={scheduleResume}
         className="flex cursor-grab items-start gap-4 overflow-x-auto active:cursor-grabbing [-ms-overflow-style:none] [scrollbar-width:none] lg:gap-5 [&::-webkit-scrollbar]:hidden"
       >
         {items.map((item, index) => (
