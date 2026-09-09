@@ -15,7 +15,7 @@ export function ProcessSection() {
               tone="light"
               eyebrow="Como funciona"
               title="A decisão acontece antes da reserva, não depois."
-              description="A avaliação evita experiências ruins. Se a rotina do pet combinar com a hospedagem familiar, a estadia seguirá com previsibilidade para o tutor e conforto para o cão."
+              description="A avaliação evita experiências ruins. Se a rotina do pet combinar com a hospedagem familiar, a estadia seguirá com tranquilidade para o tutor e conforto para o cão."
             />
             <Button asChild size="lg" variant="whatsapp" className="mt-8">
               <a href={links.scheduleVisit} target="_blank" rel="noreferrer">
