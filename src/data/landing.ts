@@ -187,19 +187,25 @@ export const testimonials = [
 ];
 
 export const gallery = [
-  { src: "/images/bisteca.jpeg", caption: "Bistecão" },
-  { src: "/images/Tekila.jpg", caption: "Tekila" },
-  { src: "/images/batata.png", caption: "Batata" },
-  { src: "/images/Bob.png", caption: "Bob" },
-  { src: "/images/dog2.jpeg", caption: "Kiba" },
-  { src: "/images/gabi.jpeg", caption: "Gabizinha" },
-  { src: "/images/lolo-banco.jpeg", caption: "Lolô" },
-  { src: "/images/lolo-coberta.jpeg", caption: "Lolô - beeeem quentinho" },
-  { src: "/images/nina.jpeg", caption: "Nina" },
-  { src: "/images/ozzy.jpeg", caption: "Ozzy" },
-  { src: "/images/pirata.jpeg", caption: "Pirata" },
-  { src: "/images/pos-operatorio.jpeg", caption: "Luke - Cuidado pós-cirúrgico" },
-];
+  { src: "/images/bisteca.jpeg", caption: "Bistecão", row: 1 },
+  { src: "/images/Tekila.jpg", caption: "Tekila", row: 1 },
+  { src: "/images/batata.png", caption: "Batata", row: 1 },
+  { src: "/images/Bob.png", caption: "Bob", row: 1 },
+  { src: "/images/buda.jpg", caption: "Buda", row: 1 },
+  { src: "/images/tekila-2.jpg", caption: "Tekila", row: 1 },
+  { src: "/images/dog2.jpeg", caption: "Kiba", row: 2 },
+  { src: "/images/gabi.jpeg", caption: "Gabizinha", row: 2 },
+  { src: "/images/lolo-banco.jpeg", caption: "Lolô", row: 2 },
+  { src: "/images/lolo-coberta.jpeg", caption: "Lolô - beeeem quentinho", row: 2 },
+  { src: "/images/lolo-2.jpg", caption: "Lolô", row: 2 },
+  { src: "/images/batatinha.jpg", caption: "Batatinha", row: 2 },
+  { src: "/images/nina.jpeg", caption: "Nina", row: 3 },
+  { src: "/images/ozzy.jpeg", caption: "Ozzy", row: 3 },
+  { src: "/images/pirata.jpeg", caption: "Pirata", row: 3 },
+  { src: "/images/pos-operatorio.jpeg", caption: "Luke - Cuidado pós-cirúrgico", row: 3 },
+  { src: "/images/lolo-dormindinho.jpg", caption: "Lolô dormindinho", row: 3 },
+  { src: "/images/gabi-dando-oi.jpg", caption: "Gabi dando oi<3", row: 3 },
+] satisfies { src: string; caption: string; row: 1 | 2 | 3 }[];
 
 export const faqs = [
   {
