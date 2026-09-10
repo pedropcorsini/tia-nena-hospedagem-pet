@@ -17,7 +17,7 @@ const manrope = Manrope({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tia-nena-hospedagem-pet.vercel.app";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://tianenahospedagem.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -42,11 +42,13 @@ export const metadata: Metadata = {
     siteName: "Tia Nena Hospedagem Pet",
     locale: "pt_BR",
     type: "website",
+    images: [{ url: "/images/hero-fundo.png", width: 1672, height: 941 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Tia Nena Hospedagem Pet",
     description: "Hospedagem familiar para cães com cuidado atento e rotina individual.",
+    images: ["/images/hero-fundo.png"],
   },
   alternates: {
     canonical: siteUrl,

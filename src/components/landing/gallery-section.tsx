@@ -71,7 +71,7 @@ export function GallerySection() {
         <SectionHeading
           eyebrow="Bastidores"
           title="O dia a dia na hospedagem."
-          description="Cada hóspede tem seu ritmo. Aqui estão alguns momentos da rotina real da Tia Nena."
+          description="Aqui estão alguns momentos da rotina real da Tia Nena."
         />
       </Container>
 
