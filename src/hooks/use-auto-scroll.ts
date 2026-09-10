@@ -36,20 +36,21 @@ export function useAutoScroll({ speedPxPerSec, direction = 1 }: UseAutoScrollOpt
     let frameId: number;
     let lastTimestamp: number | null = null;
 
-    // scrollLeft is clamped to >= 0 by the browser, so a negative direction
-    // must start past zero and wrap at <= 0 (not < 0) or it gets stuck at 0.
-    if (direction === -1 && scroller.scrollLeft <= 0) {
-      scroller.scrollLeft = scroller.scrollWidth / 2;
-    }
+    // WebKit (iOS Safari and, on iOS, every other browser too — they all
+    // share the same engine) truncates scrollLeft to an integer. Reading it
+    // back each frame and adding a sub-pixel delta (~0.47px at 60fps for a
+    // 28px/s speed) rounds straight back to the same integer forever when
+    // incrementing, while decrementing always drops by a whole pixel — so a
+    // positive direction would silently freeze while negative kept working.
+    // Tracking position as our own float and only ever writing it (never
+    // reading it back to accumulate) avoids the truncation entirely.
+    let position = direction === -1 ? scroller.scrollWidth / 2 : 0;
+    scroller.scrollLeft = position;
 
-    function wrapScrollPosition() {
-      if (!scroller) return;
-      const singleSetWidth = scroller.scrollWidth / 2;
-      if (scroller.scrollLeft >= singleSetWidth) {
-        scroller.scrollLeft -= singleSetWidth;
-      } else if (scroller.scrollLeft <= 0) {
-        scroller.scrollLeft += singleSetWidth;
-      }
+    function wrapPosition(pos: number, singleSetWidth: number) {
+      if (singleSetWidth <= 0) return pos;
+      const wrapped = pos % singleSetWidth;
+      return wrapped < 0 ? wrapped + singleSetWidth : wrapped;
     }
 
     function tick(timestamp: number) {
@@ -58,9 +59,13 @@ export function useAutoScroll({ speedPxPerSec, direction = 1 }: UseAutoScrollOpt
       const deltaSeconds = (timestamp - lastTimestamp) / 1000;
       lastTimestamp = timestamp;
 
-      if (!isPausedRef.current && !isDraggingRef.current && !reducedMotionRef.current) {
-        scroller.scrollLeft += direction * speedPxPerSec * deltaSeconds;
-        wrapScrollPosition();
+      if (isPausedRef.current || isDraggingRef.current) {
+        // Stay in sync with manual scrolling/dragging so autoplay resumes
+        // from wherever the user left it instead of jumping.
+        position = scroller.scrollLeft;
+      } else if (!reducedMotionRef.current) {
+        position = wrapPosition(position + direction * speedPxPerSec * deltaSeconds, scroller.scrollWidth / 2);
+        scroller.scrollLeft = position;
       }
 
       frameId = requestAnimationFrame(tick);
