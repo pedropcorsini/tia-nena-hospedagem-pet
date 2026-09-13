@@ -212,6 +212,14 @@ export const testimonials = [
     author: "Lu",
     pet: "tutora da Mel",
   },
+  {
+    quote: [
+      "A Baleia se adaptou super bem desde o começo e sempre foi muito bem cuidada. O pessoal é muito atencioso, faz várias atividades com eles e ainda mandam vídeos, então a gente consegue acompanhar um pouquinho de como foi o dia dela por lá. Ela também já ficou hospedada e foi tudo muito tranquilo.",
+      "E acho que o melhor sinal de que ela gosta mesmo é que toda vez que a gente passa na frente ela já quer entrar. Às vezes nem vamos para a creche e ela fica toda animada achando que vai.",
+    ].join("\n\n"),
+    author: "Marina",
+    pet: "tutora da Baleia",
+  },
 ];
 
 export const gallery = [
@@ -223,6 +231,7 @@ export const gallery = [
   { src: "/images/tekila-2.jpg", caption: "Tekila", row: 1 },
   { src: "/images/azeitonao.png", caption: "Azeitonão", row: 1 },
   { src: "/images/luck.jpeg", caption: "Luck", row: 1 },
+  { src: "/images/baleia-2.png", caption: "Baleia", row: 2 },
   { src: "/images/dog2.jpeg", caption: "Kiba", row: 2 },
   { src: "/images/gabi.jpeg", caption: "Gabizinha", row: 2 },
   { src: "/images/lolo-banco.jpeg", caption: "Lolô", row: 2 },
@@ -234,7 +243,7 @@ export const gallery = [
   { src: "/images/nina.jpeg", caption: "Nina", row: 3 },
   { src: "/images/ozzy.jpeg", caption: "Ozzy", row: 3 },
   { src: "/images/pirata.jpeg", caption: "Pirata", row: 3 },
-  { src: "/images/pos-operatorio.jpeg", caption: "Luke - Cuidado pós-cirúrgico", row: 3 },
+  { src: "/images/pos-operatorio.jpeg", caption: "Luke", row: 3 },
   { src: "/images/lolo-dormindinho.jpg", caption: "Lolô dormindinho", row: 3 },
   { src: "/images/gabi-dando-oi.jpg", caption: "Gabi dando oi<3", row: 3 },
   { src: "/images/baleia.jpeg", caption: "Baleia", row: 3 },
