@@ -42,13 +42,13 @@ export const metadata: Metadata = {
     siteName: "Tia Nena Hospedagem Pet",
     locale: "pt_BR",
     type: "website",
-    images: [{ url: "/images/hero-fundo.png", width: 1672, height: 941 }],
+    images: [{ url: "/images/og-image.png", width: 1672, height: 941 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Tia Nena Hospedagem Pet",
     description: "Hospedagem familiar para cães com cuidado atento e rotina individual.",
-    images: ["/images/hero-fundo.png"],
+    images: ["/images/og-image.png"],
   },
   alternates: {
     canonical: siteUrl,
