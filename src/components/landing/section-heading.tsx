@@ -6,6 +6,8 @@ type SectionHeadingProps = {
   description?: string;
   align?: "left" | "center";
   tone?: "dark" | "light";
+  titleClassName?: string;
+  maxWidthClassName?: string;
 };
 
 export function SectionHeading({
@@ -14,11 +16,14 @@ export function SectionHeading({
   description,
   align = "center",
   tone = "dark",
+  titleClassName,
+  maxWidthClassName = "max-w-3xl",
 }: SectionHeadingProps) {
   return (
     <div
       className={cn(
-        "mx-auto max-w-3xl",
+        "mx-auto",
+        maxWidthClassName,
         align === "center" ? "text-center" : "mx-0 text-left",
       )}
     >
@@ -34,6 +39,7 @@ export function SectionHeading({
         className={cn(
           "mt-3 font-heading text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl",
           tone === "light" ? "text-white" : "text-ink",
+          titleClassName,
         )}
       >
         {title}

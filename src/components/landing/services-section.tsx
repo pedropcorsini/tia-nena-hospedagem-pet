@@ -25,8 +25,9 @@ const decorativeAnimals: (DecorativeAnimalProps & { id: string })[] = [
     id: "bulldog",
     src: "/images/bulldog-laco.png",
     alt: "Cão hospedado na Tia Nena, todo estiloso com laço",
-    positionClassName: "right-10 -top-14 bottom-0",
-    objectPositionClassName: "object-right-top",
+    positionClassName: "right-10 -top-14",
+    heightClassName: "h-[420px] xl:h-[500px]",
+    objectPositionClassName: "object-top",
     widthClassName: "w-[300px] xl:w-[360px]",
     layer: "front",
     rotateClassName: "-rotate-6",
@@ -35,8 +36,9 @@ const decorativeAnimals: (DecorativeAnimalProps & { id: string })[] = [
     id: "bulldog-frisbee",
     src: "/images/bulldog-frisbee.png",
     alt: "Cão hospedado na Tia Nena, brincando com frisbee",
-    positionClassName: "left-10 -top-14 bottom-0",
-    objectPositionClassName: "object-left-top",
+    positionClassName: "left-10 -top-14",
+    heightClassName: "h-[420px] xl:h-[500px]",
+    objectPositionClassName: "object-top",
     widthClassName: "w-[300px] xl:w-[360px]",
     layer: "front",
     rotateClassName: "rotate-6",
@@ -54,16 +56,18 @@ export function ServicesSection() {
         <DecorativeAnimal key={id} {...animal} />
       ))}
 
-      <Container>
+      <Container className="xl:px-[440px] 2xl:max-w-[1800px]">
         <SectionHeading
           eyebrow="Serviços"
-          title="Hospedagem, creche e cuidados especiais sem clima de canil."
+          title="Hospedagem, creche e cuidados especiais."
           description="Cada serviço parte da mesma base: ambiente familiar, atenção individual e comunicação clara com o tutor."
+          maxWidthClassName="max-w-3xl 2xl:max-w-4xl"
+          titleClassName="2xl:text-6xl"
         />
       </Container>
 
-      <div className="mt-12 px-5 sm:px-6 lg:pl-[260px] lg:pr-[300px] xl:pl-[320px] xl:pr-[360px]">
-        <div className="mx-auto grid max-w-4xl gap-5 md:grid-cols-2">
+      <div className="mt-12 px-5 sm:px-6 xl:pl-[410px] xl:pr-[410px]">
+        <div className="mx-auto grid max-w-4xl gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2">
           {services.map((service) => (
             <article
               key={service.title}

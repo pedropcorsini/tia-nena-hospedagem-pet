@@ -7,6 +7,7 @@ export type DecorativeAnimalProps = {
   alt: string;
   positionClassName: string;
   widthClassName?: string;
+  heightClassName?: string;
   objectPositionClassName?: string;
   layer?: "front" | "back";
   flip?: boolean;
@@ -19,6 +20,7 @@ export function DecorativeAnimal({
   alt,
   positionClassName,
   widthClassName = "w-[320px] xl:w-[380px]",
+  heightClassName,
   objectPositionClassName = "object-bottom",
   layer = "front",
   flip = false,
@@ -28,9 +30,10 @@ export function DecorativeAnimal({
   return (
     <div
       className={cn(
-        "pointer-events-none absolute top-0 hidden lg:block",
+        "pointer-events-none absolute top-0 hidden xl:block",
         layer === "front" ? "z-10" : "-z-10",
         widthClassName,
+        heightClassName,
         positionClassName,
         rotateClassName,
       )}
