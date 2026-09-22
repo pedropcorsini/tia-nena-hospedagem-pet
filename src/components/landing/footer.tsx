@@ -10,8 +10,8 @@ export function Footer() {
   return (
     <footer className="border-t border-ink/10 bg-cream py-12">
       <Container>
-        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(180px,0.45fr)_minmax(260px,0.55fr)] lg:items-start">
-          <div className="max-w-md">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-1 sm:gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(180px,0.45fr)_minmax(260px,0.55fr)] lg:items-start">
+          <div className="col-span-2 max-w-md sm:col-span-1">
             <Image
               src="/images/logo-tia-nena-transparente.png"
               alt="Tia Nena Hospedagem"

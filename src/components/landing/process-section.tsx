@@ -25,18 +25,18 @@ export function ProcessSection() {
             </Button>
           </div>
 
-          <div className="grid gap-4">
+          <div className="grid gap-3 sm:gap-4">
             {processSteps.map((step, index) => (
               <article
                 key={step.title}
-                className="grid gap-2 rounded-[2rem] border border-white/10 bg-white/[0.06] p-5 backdrop-blur sm:grid-cols-[auto_1fr] sm:gap-6 sm:p-6"
+                className="grid gap-1.5 rounded-2xl border border-white/10 bg-white/[0.06] p-4 backdrop-blur sm:grid-cols-[auto_1fr] sm:gap-6 sm:rounded-[2rem] sm:p-6"
               >
-                <span className="font-heading text-4xl font-black text-honey sm:text-5xl">
+                <span className="font-heading text-3xl font-black text-honey sm:text-5xl">
                   0{index + 1}
                 </span>
                 <div>
-                  <h3 className="font-heading text-2xl font-black text-white">{step.title}</h3>
-                  <p className="mt-2 leading-7 text-white/68">{step.description}</p>
+                  <h3 className="font-heading text-xl font-black text-white sm:text-2xl">{step.title}</h3>
+                  <p className="mt-1.5 text-sm leading-6 text-white/68 sm:mt-2 sm:text-base sm:leading-7">{step.description}</p>
                 </div>
               </article>
             ))}

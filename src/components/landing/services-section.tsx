@@ -67,14 +67,14 @@ export function ServicesSection() {
       </Container>
 
       <div className="mt-12 px-5 sm:px-6 xl:pl-[410px] xl:pr-[410px]">
-        <div className="mx-auto grid max-w-4xl gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2">
+        <div className="mx-auto grid max-w-4xl gap-3 sm:gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-2">
           {services.map((service) => (
             <article
               key={service.title}
-              className="rounded-[2rem] border border-ink/8 bg-cream p-6 shadow-sm transition-colors duration-200 hover:border-honey/70"
+              className="rounded-2xl border border-ink/8 bg-cream p-4 shadow-sm transition-colors duration-200 hover:border-honey/70 sm:rounded-[2rem] sm:p-6"
             >
-              <h3 className="font-heading text-xl font-black text-ink">{service.title}</h3>
-              <p className="mt-3 leading-7 text-ink/66">{service.description}</p>
+              <h3 className="font-heading text-lg font-black text-ink sm:text-xl">{service.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-ink/66 sm:mt-3 sm:text-base sm:leading-7">{service.description}</p>
             </article>
           ))}
         </div>
