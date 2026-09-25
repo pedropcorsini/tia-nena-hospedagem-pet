@@ -13,7 +13,3 @@ Landing page for Tia Nena Hospedagem, presenting the dog boarding and care servi
 - Next.js
 - TypeScript
 - Tailwind CSS
-
-## Author
-
-Built by **[Pedro Passos Corsini](https://github.com/pedropcorsini)**.
